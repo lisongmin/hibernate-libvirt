@@ -53,6 +53,7 @@ save_vms()
     for vm in $(get_running_vm) ; do
         save_a_vm "$vm"
     done
+    echo "<INFO> Step: Save vms done."
 }
 
 restore_vms()
@@ -62,6 +63,7 @@ restore_vms()
     for vm in $(get_shutoff_vm) ; do
         restore_a_vm "$vm"
     done
+    echo "<INFO> Step: Restore vms done."
 }
 
 usage()
