@@ -5,6 +5,7 @@ Before=hibernate.target
 
 [Service]
 ExecStart=/usr/bin/hibernate-libvirt-guests.sh hibernate
+ExecStop=/usr/bin/hibernate-libvirt-guests.sh resume
 
 [Install]
 WantedBy=hibernate.target

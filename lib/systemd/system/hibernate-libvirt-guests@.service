@@ -7,6 +7,7 @@ Before=hibernate.target
 User=%I
 ENVIRONMENT=LIBVIRT_SAVE_PATH=/home/%I/.cache/libvirt/saved
 ExecStart=/usr/bin/hibernate-libvirt-guests.sh hibernate
+ExecStop=/usr/bin/hibernate-libvirt-guests.sh resume
 
 [Install]
 WantedBy=hibernate.target
