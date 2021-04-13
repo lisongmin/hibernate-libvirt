@@ -60,10 +60,6 @@ restore_vms()
     local vm
     local IFS=$'\n'
     for vm in $(get_shutoff_vm) ; do
-        is_saved_vm "$vm"
-        if [ $? -ne 0 ]; then
-            continue
-        fi
         restore_a_vm "$vm"
     done
 }
