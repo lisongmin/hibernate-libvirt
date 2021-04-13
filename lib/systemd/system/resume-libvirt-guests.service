@@ -1,0 +1,9 @@
+[Unit]
+Description=Restore all running libvirt guests on resume
+After=hibernate.target
+
+[Service]
+ExecStart=/usr/bin/hibernate-libvirt-guests.sh resume
+
+[Install]
+WantedBy=hibernate.target

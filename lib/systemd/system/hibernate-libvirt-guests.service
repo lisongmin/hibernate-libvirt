@@ -1,0 +1,10 @@
+
+[Unit]
+Description=Save all running libvirt guests on hibernate
+Before=hibernate.target
+
+[Service]
+ExecStart=/usr/bin/hibernate-libvirt-guests.sh hibernate
+
+[Install]
+WantedBy=hibernate.target
